@@ -1,0 +1,53 @@
+.container{
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows:  0.25fr 1fr 1fr 1fr 0.5fr;
+    grid-column-gap: 6px;
+    grid-row-gap: 10px;
+}
+
+.nav{
+    text-align: center;
+    background-color: #00ffff;
+    grid-area: 1 / 1 / 2 / 6;
+}
+.section{
+    background-color: #3700ff;
+    grid-area: 2 / 2 / 5 / 5;
+
+}
+.section table{
+    text-align: center;
+    width: 80%;
+    height: 80%;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 10px solid;
+}
+
+.section button{
+
+}
+.aside{
+    background-color: #12d91c;
+    grid-area: 2 / 1 / 5 / 2;
+}
+.div1{
+    background-color: #e5ff00;
+    grid-area: 2 / 5 / 3 / 6;
+}
+.div2{
+    background-color: #ff0000;
+    grid-area: 3 / 5 / 4 / 6;
+}
+.div3{
+    background-color: #d400ff;
+    grid-area: 4 / 5 / 5 / 6;
+}
+.footer{
+    background-color: #ff009d;
+    grid-area: 5 / 1 / 6 / 6;
+}
