@@ -38,17 +38,69 @@
 
 .btnNav:hover{
     background-color: #FFEBD8;
+    text-shadow: 0 0 15px #FF8080;
+    transition: all 0.5s ease;
 
 }
 
-.material-symbols-outlined{
-    text-align: center;
+.material-symbols-outlined {
+    font-size: 0px;       
+    display:flex;
+    margin-left: 25px;
+
 }
 
 .div2 {
-    background-color: rgb(255, 0, 242);
+    background-color: #F6FDC3;
     grid-area: 1 / 2 / 5 / 6;
 }
+
+.contenidoCentral{
+    margin-top: 35px;
+}
+
+.crear{
+    width: 350px;
+    height: 250px;
+    margin-left: 25px;
+    background-color: #F9F07A;
+    border: none;
+}
+
+.crear:hover{
+    background-color: #FFC5C5;
+    text-shadow: 0 0 15px #FF8080;
+    transition: all 0.5s ease;
+}
+
+.div2 .crear .material-symbols-outlined {
+    text-align: center;
+    font-size: 150px;
+    color: #9195F6;
+
+}
+.merriweather-bold {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: normal;
+    margin-left: 25px;
+    margin-bottom:30px;
+    color: #FF8080;
+    text-transform: uppercase;
+  }
+
+.btnNuevoEvento{
+    background-color: #CDFAD5;
+    border: none;
+    color: #515151;
+    padding: 15px 55px;
+    font-family: "Madimi One", sans-serif;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+
+  }
 
 .div3 {
     background-color: rgb(115, 255, 0);
