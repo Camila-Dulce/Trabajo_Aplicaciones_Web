@@ -46,6 +46,11 @@
     cursor: pointer; 
 }
 
+a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
 .textoIcono{
     margin-left: 6px;
     font-size: 15px;

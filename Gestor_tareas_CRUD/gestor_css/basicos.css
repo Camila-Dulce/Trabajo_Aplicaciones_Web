@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #CDFAD5;
+    height: 100vh;
+    margin-top: 25px;
+    
+}
+
+.contenido {
+    max-width: 80%;
+    width: 400px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+.imgNav {
+    width: 24px;
+    height: 24px;
+}
+
+.icono {
+    position: fixed; 
+    right: 0; 
+    top: 50%; 
+    text-align: center;
+    transform: translateY(-70%)
+}
+  
+.iconosLaterales, .imgNav{
+  background: none; 
+  border: none; 
+  padding: 0; 
+  font-size: 24px;
+  margin-right: 35px;
+  margin-top: 10px;
+  cursor: pointer; 
+}
+
+.imgNav:hover {
+    background-color: #f2f2f2;
+    text-shadow: 0 0 15px #FF8080;
+    transition: all 0.5s ease;
+}
+
+.iconosLaterales:hover {
+    text-shadow: 0 0 15px #FF8080;
+    transition: all 0.5s ease;
+}
+
+/*Perfil*/
+
+.perfil h1 {
+    font-family: "Merriweather", serif;
+    color: #FF8080;
+    text-shadow:  2px 2px 4px #FB88B4;
+    margin-top: 14px;
+    text-align: center;
+
+}
+
+.perfil p {
+    color: #515151;
+    font-family: "Madimi One", sans-serif;
+    letter-spacing: 1px;
+    text-align: center;
+
+}
+
+#fecha {
+    color: #515151;
+    padding: 50px 0 5px 0;
+    font-family: "Merriweather", serif;
+
+}
+
+/*agregar tarea*/
+
+.agregar_tarea {
+    background-color: #ffffff;
+    border-radius: 15px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 70px;
+    margin: 40px 0;
+}
+
+.agregar_tarea input {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: none;
+    background-color: #ffffff;
+}
+
+.agregar_tarea span {
+    font-size: 50px;
+    color: #FF8080;
+
+}
+
+.agregar_tarea span:hover {
+    text-shadow: 0 0 8px #FF8080;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.agregar_tarea input::placeholder {
+    font-family: "Madimi One", sans-serif;
+    font-size: 1.1rem;
+    color: #89B9AD;
+}
+
+
+.agregar_tarea:hover {
+    text-shadow: 0 0 8px #FF8080;
+    transform: scale(1.1);
+    cursor: pointer;
+
+}
+
+/*seccion tarea*/
+
+.seccion_tarea h3 {
+    color: #FF8080;
+    margin-bottom: 20px;
+    font-family: "Merriweather", serif;
+    text-align: center;
+}
+
+.seccion_tarea li {
+    display: flex;
+    background: #FF8080;
+    border-radius: 15px;
+    padding: 10px;
+    align-items: justify;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.seccion_tarea span {
+    font-size: 25px;
+
+}
+
+.seccion_tarea span:hover {
+    color: #89B9AD;
+    cursor: pointer;
+}
+
+.seccion_tarea ul p {
+    font-size: 1.2rem;
+    font-family: "Madimi One", sans-serif;    
+    color: #515151;
+}
+
+.subrayado {
+    text-decoration: line-through;
+    color: #89B9AD;
+}

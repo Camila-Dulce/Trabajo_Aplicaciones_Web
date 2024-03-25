@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taskhub</title>
+    <link rel="icon" type="image/png" href="https://cdn.icon-icons.com/icons2/694/PNG/512/Tumblr_Rounded_icon-icons.com_61568.png">
+    <link rel="stylesheet" href="gestor_css/basicos.css">
+    <link rel="stylesheet" href="index.html">
+
+    <!--Fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!--Iconos-->
+
+    <script src="https://kit.fontawesome.com/0940ae2aa3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+</head>
+<body>
+    <div class="contenido">
+        <div class="menuNav">
+            <div class="icono">
+                <button class="iconosLaterales"><span class="material-symbols-outlined">add_circle</span></button><br>
+                <button class="iconosLaterales"><span class="material-symbols-outlined">delete</span></button><br>
+                <button class="iconosLaterales"><span class="material-symbols-outlined">manage_search</span></button><br>
+                <button class="iconosLaterales"><span class="material-symbols-outlined">sync_alt</span></button><br>
+                <img class="imgNav" src="https://cdn.icon-icons.com/icons2/694/PNG/512/Tumblr_Rounded_icon-icons.com_61568.png" alt="Logo Taskhub">
+              </div>     
+        </div>
+    <div class="perfil">
+        <div id="fecha">24 de marzo de 2024</div>
+        <h1>Bienvenido</h1>
+        <p>¡Comencemos a cumplir tus metas!</p>
+    </div>
+
+    <div class="agregar_tarea">
+        <input type="text" id="input" placeholder="Agregar tarea">
+            <span class="material-symbols-outlined" data="realizado" id="0">add_circle</span>            
+    </div>
+
+    <div class="seccion_tarea">
+        <h3>Estas son tus tareas pendientes</h3>
+        <ul id="lista">
+            <li>
+                <span class="material-symbols-outlined" data="eliminado" id="0">radio_button_unchecked</span>
+                <p class="text">hacer tarea</p>
+                <span class="material-symbols-outlined" data="eliminado" id="0">delete</span>
+
+            </li>
+        </ul>
+
+    </div>
+</div>
+
+
+    <script src="gestor_javascript/index.js">
+    </script>
+    
+</body>
+</html>
