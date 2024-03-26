@@ -13,9 +13,9 @@ body {
 
 .contenido {
     max-width: 80%;
-    width: 400px;
-    height: 600px;
     margin: 0 auto;
+    width: 500px;
+    height: 300px;
 }
 
 .imgNav {
@@ -28,7 +28,13 @@ body {
     right: 0; 
     top: 50%; 
     text-align: center;
-    transform: translateY(-70%)
+    transform: translateY(-70%);
+    margin-right: 70px;
+}
+
+a {
+    color: #000; 
+    text-decoration: none;
 }
   
 .iconosLaterales, .imgNav{
@@ -50,6 +56,12 @@ body {
 .iconosLaterales:hover {
     text-shadow: 0 0 15px #FF8080;
     transition: all 0.5s ease;
+}
+
+input {
+    font-family: "Madimi One", sans-serif;
+    color: #FF8080;
+    font-size: 20px;
 }
 
 /*Perfil*/
@@ -163,4 +175,16 @@ body {
 .subrayado {
     text-decoration: line-through;
     color: #89B9AD;
+}
+
+.mensajeError {
+    display: block;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    color: #515151;
+    padding: 10px auto;
+    border-radius: 8px;
+    text-align: center;
+    font-family: "Madimi One", sans-serif;    
+
 }

@@ -27,15 +27,17 @@
     <div class="contenido">
         <div class="menuNav">
             <div class="icono">
-                <button class="iconosLaterales"><span class="material-symbols-outlined">add_circle</span></button><br>
-                <button class="iconosLaterales"><span class="material-symbols-outlined">delete</span></button><br>
-                <button class="iconosLaterales"><span class="material-symbols-outlined">manage_search</span></button><br>
-                <button class="iconosLaterales"><span class="material-symbols-outlined">sync_alt</span></button><br>
-                <img class="imgNav" src="https://cdn.icon-icons.com/icons2/694/PNG/512/Tumblr_Rounded_icon-icons.com_61568.png" alt="Logo Taskhub">
-              </div>     
+                <a href="basicos.html" class="iconosLaterales"><span class="material-symbols-outlined">add_circle</span></a><br>
+                <a href="basicos.html" class="iconosLaterales"><span class="material-symbols-outlined">delete</span></a><br>
+                <a href="basicos.html" class="iconosLaterales"><span class="material-symbols-outlined">manage_search</span></a><br>
+                <a href="basicos.html" class="iconosLaterales"><span class="material-symbols-outlined">sync_alt</span></a><br>
+                <a href="index.html" class="imgNav"><img src="https://cdn.icon-icons.com/icons2/694/PNG/512/Tumblr_Rounded_icon-icons.com_61568.png" width="24px" alt="Logo Taskhub"></a>
+            </div>     
         </div>
+    
+    
     <div class="perfil">
-        <div id="fecha">24 de marzo de 2024</div>
+        <div id="fecha"></div>
         <h1>Bienvenido</h1>
         <p>¡Comencemos a cumplir tus metas!</p>
     </div>
@@ -44,6 +46,7 @@
         <input type="text" id="input" placeholder="Agregar tarea">
             <span class="material-symbols-outlined" data="realizado" id="botonAgregar">add_circle</span>            
     </div>
+    <div class="mensajeError"></div>
 
     <div class="seccion_tarea">
         <h3>Estas son tus tareas pendientes</h3>
@@ -57,6 +60,7 @@
         </ul>
 
     </div>
+</div>
 </div>
 
 <script src="gestor_javascript/index.js"></script>

@@ -119,7 +119,7 @@ a {
     right: 0; 
     top: 50%; 
     text-align: center;
-    transform: translateY(-70%)
+    transform: translateY(-70%);
 }
   
 .material-symbols-outlined {
