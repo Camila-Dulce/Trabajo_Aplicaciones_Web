@@ -81,16 +81,22 @@
                 <a href="basicos.html" class="iconosLaterales"><span class="material-symbols-outlined">manage_search</span></a><br>
                 <a href="basicos.html" class="iconosLaterales"><span class="material-symbols-outlined">sync_alt</span></a><br>
               </div>     
+              <h1 class="merriweather-bold" id="tituloCentral">Mis Tareas</h1>
+
             <div class="contenidoCentral">
-                <h1 class="merriweather-bold">Mis Tareas</h1>
-           
-                <a href="basicos.html">
-                    <button class="crear">
-                        <span class="material-symbols-outlined">
-                            note_stack_add
-                        </span>
-                    </button>
-                </a>
+                
+
+                <div class="espacioTarea">
+                    <a href="basicos.html" target="_blank">
+                        <button class="crear" data="si" onclick="crearNuevoEspacio()">
+                            <span class="material-symbols-outlined">
+                                note_stack_add
+                            </span>
+                        </button>
+                    </a>
+                </div>
+                <div id="contenedorEspaciosTarea"></div>
+                
             </div> 
         </div>
 
@@ -119,8 +125,7 @@
         </div>
     </section>
 
-    <script>
-    </script>
+    <script src="gestor_javascript/index.js"></script>
     
 </body>
 </html>

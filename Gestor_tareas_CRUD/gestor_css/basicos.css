@@ -29,7 +29,30 @@ body {
     top: 50%; 
     text-align: center;
     transform: translateY(-70%);
-    margin-right: 70px;
+    margin-right: 100px;
+}
+
+.tooltip {
+    font-size: 15px;
+    font-family: "Madimi One", sans-serif;
+    visibility: hidden;
+    transform: translateY(-100%);
+    width: 120px;
+    background-color: #FF8080;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.textoIcono:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
 }
 
 a {

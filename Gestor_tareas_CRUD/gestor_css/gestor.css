@@ -78,11 +78,18 @@ a {
     grid-area: 1 / 2 / 5 / 6;
 }
 
+#tituloCentral{
+    text-align: center;
+    margin-top: 25px;
+
+}
+
 .contenidoCentral{
+    display: flex;
     margin-top: 35px;
 }
 
-.crear{
+.crear {
     width: 350px;
     height: 250px;
     margin-left: 25px;
@@ -95,6 +102,21 @@ a {
     background-color: #FFC5C5;
     text-shadow: 0 0 15px #FF8080;
     transition: all 0.5s ease;
+}
+
+
+#contenedorEspaciosTarea { /*pendiente organizar diseño de nuevos espacios tarea*/
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80%;
+    margin-left: 200px;
+    margin-right: 300px;
+}
+
+.espacioTarea { /*pendiente organizar diseño de nuevos espacios tarea*/
+    margin-right: 15px;
+    margin-bottom: 10px;
+    width: 150px; 
 }
 
 .div2 .crear .material-symbols-outlined {
