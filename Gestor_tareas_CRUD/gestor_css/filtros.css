@@ -3,3 +3,19 @@
     padding: 0px;
 }
 
+body {
+    background: #CDFAD5;
+    height: 100vh;
+    margin-top: 25px;
+    
+}
+
+.contenido {
+    max-width: 80%;
+    margin: 0 auto;
+    width: 500px;
+    height: 300px;
+}
+
+
+
