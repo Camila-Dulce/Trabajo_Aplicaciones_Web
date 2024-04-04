@@ -4,37 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juego_Memoria</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Micro+5&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="juego_css/index.css">
+    
 </head>
 <body class="container">
-
-        <nav class="nav"><h1>Juego Memoria</h1></nav>
+        <nav class="nav">
+            <video src="./Recursos/Vídeofondo1.mp4" autoplay loop muted></video>
+            <h1>Juego Memoria</h1>
+        </nav>
         <section class="section">
             <table>
                 <tr>
-                    <td><button class="seleccionar">
-                        <img src="https://icons.iconarchive.com/icons/custom-icon-design/flatastic-1/256/add-1-icon.png" width="50px"></button></td>
-                    <td><button class="seleccionar">
-                        <img src="https://icons.iconarchive.com/icons/custom-icon-design/flatastic-1/256/add-1-icon.png" width="50px">
-                    </button></td>
-                    <td><button class="seleccionar">
-                        <img src="https://icons.iconarchive.com/icons/custom-icon-design/flatastic-1/256/add-1-icon.png" width="50px"></button></td>
+                    <td><button class="seleccionar"></button></td>
+                    <td><button class="seleccionar"></button></td>
+                    <td><button class="seleccionar"></button></td>
+                    <td><button class="seleccionar"></button></td>
                 </tr>
                 <tr>
-                    <td><button class="seleccionar">
-                        <img src="https://icons.iconarchive.com/icons/custom-icon-design/flatastic-1/256/add-1-icon.png" width="50px"></button></td>
-                    <td><button class="seleccionar">
-                        <img src="https://icons.iconarchive.com/icons/custom-icon-design/flatastic-1/256/add-1-icon.png" width="50px"></button></td>
-                    <td><button class="seleccionar">
-                        <img src="https://icons.iconarchive.com/icons/custom-icon-design/flatastic-1/256/add-1-icon.png" width="50px"></button></td>
+                    <td><button class="seleccionar"></button></td>
+                    <td><button class="seleccionar"></button></td>
+                    <td><button class="seleccionar"></button></td>
+                    <td><button class="seleccionar"></button></td>
                 </tr>
             </table>
         </section>
-        <aside class="aside">aside</aside>
+        <aside class="aside">
+
+            <h1>¡Desafía tu memoria!</h1>
+
+            <p>¡Bienvenido al juego de memoria más desafiante! Pon a prueba tus habilidades y entrena tu mente con este emocionante juego. Memoriza la ubicación de las cartas y encuentra las parejas antes de que se acabe el tiempo.</p>
+
+            <h2>Instrucciones:</h2>
+            <ol>
+                <li>Haz clic en las cartas para revelarlas.</li>
+                <li>Intenta encontrar dos cartas iguales.</li>
+                <li>¡Encuentra todas las parejas antes de que termine el tiempo para ganar!</li>
+                </ol>
+
+            <p>¿Estás listo para aceptar el desafío? ¡Que empiece el juego de memoria!</p>
+
+
+        </aside>
+
         <div class="div1"><h1 id="tiempo">Tiempo: 0</h1></div>
         <div class="div2"><h1 id="punto">Puntos: 0</h1></div>
         <div class="div3">modo</div>
-        <footer class="footer">footer</footer>
+        <footer class="footer">  .</footer>
 
 
     <script src="juego_javascript/index.js"></script>
