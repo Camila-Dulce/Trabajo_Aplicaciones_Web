@@ -189,6 +189,15 @@ input {
     cursor: pointer;
 }
 
+.borrar {
+    margin-right: 0px; /* Ajusta este valor según tus necesidades */
+}
+
+.editar {
+    margin-left: 0px; /* Ajusta este valor según tus necesidades */
+}
+
+
 .seccion_tarea ul p {
     font-size: 1.2rem;
     font-family: "Madimi One", sans-serif;    

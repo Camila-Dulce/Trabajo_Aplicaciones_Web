@@ -1,15 +1,15 @@
-// obtener el array de tareas desde el almacenamiento local//
+// obtener el array de tareas desde el almacenamiento local
 const listas = JSON.parse(localStorage.getItem("Taskhub"));
 
 // mostrar las tareas en el div con id "listaTareas"
 const listaTareasElement = document.getElementById("listaTareas");
 
-// mostrar lista de tareas en esta página//
+// mostrar lista de tareas en esta página
 function mostrarTareasFiltros() {
-    // limpiar contenido antes de mostrar//
+    // limpiar contenido antes de mostrar
     listaTareasElement.innerHTML = "";
 
-    //recorrer el array de tareas y mostrar cada tarea//
+    //recorrer el array de tareas y mostrar cada tarea
     listas.forEach((tarea, index) => {
         const tareaElement = document.createElement("li");
 
@@ -40,5 +40,33 @@ function mostrarTareasFiltros() {
 // llamar a la función para mostrar las tareas en la página filtros
 mostrarTareasFiltros();
 
+//buscar tareas
+
+const inputBuscar = document.getElementById("input");
+
+inputBuscar.addEventListener('keyup', ()=>{
+    const caracter = inputBuscar.value.trim()
+    busqueda(caracter)
+})
+
+const busqueda = (cadena) => {
+
+        let arreglo = Array.from(listaTareas.children);
+
+        arreglo
+        .filter(texto => !texto.textContent.toLowerCase().includes(cadena))
+        .forEach (cadenaFiltrada => {
+            cadenaFiltrada.classList.add("textoFiltrado")
+        })
+
+        //devolver cuando se borra
+        arreglo
+        .filter(texto => texto.textContent.toLowerCase().includes(cadena))
+        .forEach (cadenaFiltrada => {
+            cadenaFiltrada.classList.remove("textoFiltrado")
+        })
+};
+
+//editar tareas
 
 

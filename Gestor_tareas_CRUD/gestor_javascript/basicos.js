@@ -5,6 +5,7 @@ const botonAgregar = document.getElementById("botonAgregar");
 const hecho = "task_alt";
 const pendiente = "radio_button_unchecked";
 const subrayado = "subrayado";
+const editar = "edit";
 let listas = JSON.parse(localStorage.getItem("Taskhub")) || [];
 let cont = listas.length;
 
@@ -23,7 +24,7 @@ function agregarTarea (tarea, cont, realizado, eliminado){
     const validacionTarea = realizado ?hecho:pendiente;
     const subr = realizado ?subrayado:"";
 
-    const nuevaLista = '<li id="nuevaLista"><span class="material-symbols-outlined" dato="realizado" id="'+ cont +'">'+ validacionTarea +'</span><p class="text '+ subr +'">' + tarea + '</p><span class="material-symbols-outlined" dato="eliminado" id="'+ cont +'">delete</span></li>';    
+    const nuevaLista = '<li id="nuevaLista"><span class="material-symbols-outlined" dato="realizado"  id="'+ cont +'">'+ validacionTarea +'</span><p class="text '+ subr +'">' + tarea + '</p><span class="material-symbols-outlined borrar" dato="eliminado" id="'+ cont +'">delete</span><span class="material-symbols-outlined editar" dato="editado" id="editar"><i class="fas fa-edit"></i></span></li>';
     lista.innerHTML += nuevaLista;
 
 
@@ -145,4 +146,22 @@ window.addEventListener("load", function() {
             agregarTarea(tarea.nombre, tarea.cont, tarea.realizado, tarea.eliminado);
         }
     });
+});
+
+
+
+
+
+
+document.querySelector('.editar').addEventListener('click', function(event) {
+    const idElemento = event.target.parentNode.getAttribute('.editar');
+
+    const indice = lista.findIndex(elemento => elemento.editar === idElemento);
+
+    if (indice !== -1) {
+        lista[indice].propiedad = 'nuevo valor';
+        console.log('Elemento modificado:', lista[indice]);
+    } else {
+        console.log('Elemento no encontrado en el array.');
+    }
 });

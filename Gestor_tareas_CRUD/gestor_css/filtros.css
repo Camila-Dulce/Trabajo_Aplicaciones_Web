@@ -17,5 +17,8 @@ body {
     height: 300px;
 }
 
+.textoFiltrado {
+    display: none !important;
+}
 
 
