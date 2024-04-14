@@ -181,7 +181,6 @@ input {
 
 .seccion_tarea span {
     font-size: 25px;
-
 }
 
 .seccion_tarea span:hover {
@@ -190,11 +189,11 @@ input {
 }
 
 .borrar {
-    margin-right: 0px; /* Ajusta este valor según tus necesidades */
+    margin-right: 0px; 
 }
 
 .editar {
-    margin-left: 0px; /* Ajusta este valor según tus necesidades */
+    margin-left: 0px; 
 }
 
 
@@ -220,4 +219,3 @@ input {
     font-family: "Madimi One", sans-serif;    
 
 }
-

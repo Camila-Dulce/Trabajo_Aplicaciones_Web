@@ -1,16 +1,21 @@
-// obtener el array de tareas desde el almacenamiento local
+// Recargar la página / obtener el array de tareas desde el almacenamiento local
 const listas = JSON.parse(localStorage.getItem("Taskhub"));
 
 // mostrar las tareas en el div con id "listaTareas"
 const listaTareasElement = document.getElementById("listaTareas");
 
-// mostrar lista de tareas en esta página
+
+// mostrar lista de tareas en esta página excluyendo las marcadas como eliminadas
 function mostrarTareasFiltros() {
     // limpiar contenido antes de mostrar
     listaTareasElement.innerHTML = "";
 
-    //recorrer el array de tareas y mostrar cada tarea
-    listas.forEach((tarea, index) => {
+    // Filtrar las tareas excluyendo las marcadas como eliminadas
+    const tareasActivas = listas.filter(tarea => tarea.eliminado !== true && tarea.realizado !== true &&  tarea.nombre !== true);
+
+
+    // Recorrer las tareas activas y mostrar cada tarea
+    tareasActivas.forEach((tarea, index) => {
         const tareaElement = document.createElement("li");
 
         const iconoElement = document.createElement("span");
@@ -21,7 +26,7 @@ function mostrarTareasFiltros() {
 
         const textoElement = document.createElement("p");
         textoElement.setAttribute("class", "text");
-        textoElement.textContent = tarea.nombre, tarea.cont, tarea.realizado, tarea.eliminado; // cada propiedad del array
+        textoElement.textContent = tarea.nombre, tarea.cont, tarea.realizado, tarea.eliminado;
 
         const eliminarElement = document.createElement("span");
         eliminarElement.setAttribute("class", "material-symbols-outlined");
@@ -29,16 +34,17 @@ function mostrarTareasFiltros() {
         eliminarElement.setAttribute("id", index);
         eliminarElement.textContent = "delete";
 
-        tareaElement.appendChild(iconoElement);
-        tareaElement.appendChild(textoElement);
-        tareaElement.appendChild(eliminarElement);
+        tareaElement.appendChild(textoElement); //traer solo el texto sin los iconos 
 
         listaTareasElement.appendChild(tareaElement);
     });
 }
 
-// llamar a la función para mostrar las tareas en la página filtros
+// Llamar a la función para mostrar las tareas activas en la página filtros
+
 mostrarTareasFiltros();
+
+
 
 //buscar tareas
 
@@ -67,6 +73,5 @@ const busqueda = (cadena) => {
         })
 };
 
-//editar tareas
 
 

@@ -5,7 +5,6 @@ const botonAgregar = document.getElementById("botonAgregar");
 const hecho = "task_alt";
 const pendiente = "radio_button_unchecked";
 const subrayado = "subrayado";
-const editar = "edit";
 let listas = JSON.parse(localStorage.getItem("Taskhub")) || [];
 let cont = listas.length;
 
@@ -24,7 +23,7 @@ function agregarTarea (tarea, cont, realizado, eliminado){
     const validacionTarea = realizado ?hecho:pendiente;
     const subr = realizado ?subrayado:"";
 
-    const nuevaLista = '<li id="nuevaLista"><span class="material-symbols-outlined" dato="realizado"  id="'+ cont +'">'+ validacionTarea +'</span><p class="text '+ subr +'">' + tarea + '</p><span class="material-symbols-outlined borrar" dato="eliminado" id="'+ cont +'">delete</span><span class="material-symbols-outlined editar" dato="editado" id="editar"><i class="fas fa-edit"></i></span></li>';
+    const nuevaLista = '<li id="nuevaLista"><span class="material-symbols-outlined" dato="realizado"  id="' + cont + '">' + validacionTarea + '</span><p class="text ' + subr + '">' + tarea + '</p><span class="material-symbols-outlined borrar" dato="eliminado" id="' + cont + '">delete</span></li>';
     lista.innerHTML += nuevaLista;
 
 
@@ -100,17 +99,18 @@ document.addEventListener("keyup", function(tar){
     }
 });
 
-//marcar hecho o pendiente//
+//marcar hecho o pendiente y editar//
 function estado(tar) {
     const tarea = tar.target;
 
-    if (tarea.tagName === "SPAN") {
+    if (tarea.tagName === "SPAN" && tarea.getAttribute("dato") === "realizado") {
         const id = parseInt(tarea.id);
 
         if (tarea.textContent === pendiente) {
             tarea.textContent = hecho;
             tarea.nextElementSibling.classList.add(subrayado);
             listas[id].realizado = true;
+            tarea.nextElementSibling.nextElementSibling.contentEditable = false; // Deshabilitar edición si está marcado como realizado
         } else if (tarea.textContent === hecho) {
             tarea.textContent = pendiente;
             tarea.nextElementSibling.classList.remove(subrayado);
@@ -119,6 +119,24 @@ function estado(tar) {
 
         // Guardar el estado actualizado en el almacenamiento local
         localStorage.setItem("Taskhub", JSON.stringify(listas));
+    }
+
+    if (tarea.tagName === "P" && !listas[parseInt(tarea.previousElementSibling.id)].realizado) {
+        // Lógica para permitir la edición del texto solo si no está marcado como realizado
+        const id = parseInt(tarea.previousElementSibling.id); // Obtener el ID de la tarea
+        tarea.contentEditable = true;
+        tarea.focus();
+
+        tarea.addEventListener('blur', function() {
+            tarea.contentEditable = false;
+            const newText = tarea.textContent;
+
+            // Actualizar el texto en el array y en el almacenamiento local
+            listas[id].tarea = newText;
+            localStorage.setItem("Taskhub", JSON.stringify(listas));
+
+            console.log('Texto editado:', newText);
+        });
     }
 }
 
@@ -137,8 +155,7 @@ function eliminarTarea(tar) {
   }
   lista.addEventListener("click", eliminarTarea);
 
-  
-// Recuperar datos del localStorage al cargar la página
+  // Recuperar datos del localStorage al cargar la página
 window.addEventListener("load", function() {
     listas = JSON.parse(localStorage.getItem("Taskhub")) || [];
     listas.forEach(function(tarea) {
@@ -146,22 +163,4 @@ window.addEventListener("load", function() {
             agregarTarea(tarea.nombre, tarea.cont, tarea.realizado, tarea.eliminado);
         }
     });
-});
-
-
-
-
-
-
-document.querySelector('.editar').addEventListener('click', function(event) {
-    const idElemento = event.target.parentNode.getAttribute('.editar');
-
-    const indice = lista.findIndex(elemento => elemento.editar === idElemento);
-
-    if (indice !== -1) {
-        lista[indice].propiedad = 'nuevo valor';
-        console.log('Elemento modificado:', lista[indice]);
-    } else {
-        console.log('Elemento no encontrado en el array.');
-    }
 });
