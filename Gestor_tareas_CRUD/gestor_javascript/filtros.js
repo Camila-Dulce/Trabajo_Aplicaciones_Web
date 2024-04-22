@@ -41,9 +41,7 @@ function mostrarTareasFiltros() {
 }
 
 // Llamar a la función para mostrar las tareas activas en la página filtros
-
 mostrarTareasFiltros();
-
 
 
 //buscar tareas

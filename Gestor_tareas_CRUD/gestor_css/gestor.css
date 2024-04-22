@@ -105,7 +105,7 @@ a {
 }
 
 
-#contenedorEspaciosTarea { /*pendiente organizar diseño de nuevos espacios tarea*/
+#contenedorEspaciosTarea { 
     display: flex;
     flex-wrap: wrap;
     max-width: 80%;
@@ -113,7 +113,7 @@ a {
     margin-right: 300px;
 }
 
-.espacioTarea { /*pendiente organizar diseño de nuevos espacios tarea*/
+.espacioTarea { 
     margin-right: 15px;
     margin-bottom: 10px;
     width: 150px; 

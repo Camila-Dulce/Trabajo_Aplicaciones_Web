@@ -132,13 +132,14 @@ function estado(tar) {
             const newText = tarea.textContent;
 
             // Actualizar el texto en el array y en el almacenamiento local
-            listas[id].tarea = newText;
+            listas[id].nombre = newText;
             localStorage.setItem("Taskhub", JSON.stringify(listas));
 
             console.log('Texto editado:', newText);
         });
     }
 }
+
 
 //eliminar tarea//
 function eliminarTarea(tar) {
