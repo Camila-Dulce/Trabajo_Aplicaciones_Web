@@ -18,8 +18,6 @@ function accigarNumeroAleatorio() {
     let num;
     do {
 
-      num = Math.floor(Math.random() * 4); // Genera un número aleatorio del 0 al 3
-
       num = Math.floor(Math.random() * 6); // Genera un número aleatorio del 0 al 3
 
     } while (contador[num] >= 2); // Repite si el número ya se ha asignado dos veces
