@@ -17,14 +17,14 @@ function accigarNumeroAleatorio() {
   for (let i = 0; i < botones.length; i++) {// ciclo sobre cada elemento del arreglo botones
     let num;
     do {
-      num = Math.floor(Math.random() * 6); // Genera un número aleatorio del 0 al 3
-    } while (contador[num] >= 2); // Repite si el número ya se ha asignado dos veces
-    botones[i].value = num;// Asigna el número aleatorio al valor del botón
-    contador[num]++;// Incrementa el contador para el número asignado
+      num = Math.floor(Math.random() * 6); // Genera un numero aleatorio del 0 al 3
+    } while (contador[num] >= 2); // Repite si el numero ya se ha asignado dos veces
+    botones[i].value = num;
+    contador[num]++;
   }
 };
 
-accigarNumeroAleatorio();// Llama a la función para asignar números aleatorios
+accigarNumeroAleatorio();
 
 function buscar() {
   let comparcion = false; // Variable para comparar si dos botones seleccionados tienen el mismo valor
@@ -32,55 +32,55 @@ function buscar() {
   let valueAnt = -1; // Valor del botón seleccionado previamente
   let botonesSeleccionados = []; // Arreglo para almacenar los botones seleccionados
   const botones = document.querySelectorAll('button'); // Selecciona todos los elementos de botón en el documento
-  botones.forEach(boton => { // Para cada botón seleccionado, se agrega un EventListener
+  botones.forEach(boton => { 
     boton.addEventListener('click', (event) => {
       if (botonesSeleccionados.includes(boton)) { // Verifica si el botón ya ha sido seleccionado
         return; // Si el botón ya ha sido seleccionado, sale de la función
       }
-      startiempo = true; // Inicia el temporizador del juego
-      let value = boton.getAttribute('value'); // Obtiene el valor del atributo 'value' del botón
-      contadorClick++; // Incrementa el contador de clics
+      startiempo = true; 
+      let value = boton.getAttribute('value'); 
+      contadorClick++; 
       if (contadorClick == 1) { // Si es el primer clic en un botón
-        boton.style.backgroundImage = `url('${imageUrls[value]}')`; // Cambia el fondo del botón al valor correspondiente
-        valueAnt = value; // Almacena el valor del botón seleccionado
+        boton.style.backgroundImage = `url('${imageUrls[value]}')`;
+        valueAnt = value; 
         botonesSeleccionados.push(boton); // Agrega el botón al arreglo de botones seleccionados
       } else if (contadorClick == 2) { // Si es el segundo clic en un botón
-        boton.style.backgroundImage = `url('${imageUrls[value]}')`; // Cambia el fondo del botón al valor correspondiente
-        comparcion = valueAnt == value; // Compara el valor del botón actual con el valor del botón anterior
+        boton.style.backgroundImage = `url('${imageUrls[value]}')`;
+        comparcion = valueAnt == value; 
         botonesSeleccionados.push(boton); // Agrega el botón al arreglo de botones seleccionados
         if (comparcion) { // Si los valores de los dos botones son iguales
           botonesSeleccionados.forEach(boton => { // Para cada botón seleccionado
             boton.style.cursor = "not-allowed"; // Cambia el cursor del ratón
             boton.disabled = true; // Deshabilita el botón
           });
-          sumarPuntos(); // Suma puntos al jugador
-          buscar(); // Reinicia la búsqueda de botones
+          sumarPuntos(); 
+          buscar(); 
         } else { // Si los valores de los dos botones son diferentes
           setTimeout(function () { // Espera 500 milisegundos
             botonesSeleccionados.forEach(boton => {
-              boton.style.backgroundImage = `url('https://i.pinimg.com/originals/b9/3b/25/b93b25589be5451f2179ccb168354ca3.jpg')`; // Cambia el fondo del botón
+              boton.style.backgroundImage = `url('https://i.pinimg.com/originals/b9/3b/25/b93b25589be5451f2179ccb168354ca3.jpg')`; 
             });
           }, 500);
-          buscar(); // Reinicia la búsqueda de botones
+          buscar(); 
         }
       }
     })
   });
 }
 
-buscar();  // Llama a la función buscar() para iniciar el juego
+buscar();  
 
 
 function sumarPuntos() {
   puntos += 50;
-  document.getElementById('punto').innerText = "puntos" + puntos;
+  document.getElementById('punto').innerText = "puntos: " + puntos;
 }
 
 let segundos = 0;
 function incrementarContador() {
   if (startiempo && (puntos < 300)) {
     segundos++;
-    document.getElementById('tiempo').innerText = "Tiempo" + segundos;
+    document.getElementById('tiempo').innerText = "Tiempo: " + segundos;
   }
 }
 const intervalo = 1000;
