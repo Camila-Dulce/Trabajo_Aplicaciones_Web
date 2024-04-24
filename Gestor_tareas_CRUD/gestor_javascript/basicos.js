@@ -6,7 +6,7 @@ const hecho = "task_alt";
 const pendiente = "radio_button_unchecked";
 const subrayado = "subrayado";
 let listas = JSON.parse(localStorage.getItem("Taskhub")) || [];
-let cont = listas.length;
+let cont = listas.length; //para obtener id de cada tarea
 
 //cracion de fecha//
 const fechaActual = new Date ();
