@@ -138,6 +138,15 @@
     grid-area: 4 / 5 / 5 / 6;
 }
 
+.div3 button{
+    color: #ffffff;
+    background-color: #0000006e;
+    border-radius: 10px; 
+    height: 140px;
+    width: 140px;
+
+
+}
 .div3:hover {
     color: #000000;
     background-color: #ffffff;
