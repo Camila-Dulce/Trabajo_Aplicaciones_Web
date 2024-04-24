@@ -63,6 +63,8 @@ function mensajeError (error){
     const mensaje = document.createElement("p");
     mensaje.textContent = error;
     mensaje.classList.add("error");
+
+    //contenedor del mensaje
     const errorCont = document.querySelector(".mensajeError"); 
     errorCont.innerHTML = '';
     errorCont.appendChild(mensaje);
@@ -110,7 +112,7 @@ function estado(tar) {
             tarea.textContent = hecho;
             tarea.nextElementSibling.classList.add(subrayado);
             listas[id].realizado = true;
-            tarea.nextElementSibling.nextElementSibling.contentEditable = false; // Deshabilitar edición si está marcado como realizado
+            tarea.nextElementSibling.contentEditable = false; // Deshabilitar edición si está marcado como realizado
         } else if (tarea.textContent === hecho) {
             tarea.textContent = pendiente;
             tarea.nextElementSibling.classList.remove(subrayado);
@@ -121,21 +123,19 @@ function estado(tar) {
         localStorage.setItem("Taskhub", JSON.stringify(listas));
     }
 
-    if (tarea.tagName === "P" && !listas[parseInt(tarea.previousElementSibling.id)].realizado) {
         // Lógica para permitir la edición del texto solo si no está marcado como realizado
+    if (tarea.tagName === "P" && !listas[parseInt(tarea.previousElementSibling.id)].realizado) {
         const id = parseInt(tarea.previousElementSibling.id); // Obtener el ID de la tarea
         tarea.contentEditable = true;
         tarea.focus();
 
         tarea.addEventListener('blur', function() {
             tarea.contentEditable = false;
-            const newText = tarea.textContent;
+            const nuevoTexto = tarea.textContent;
 
             // Actualizar el texto en el array y en el almacenamiento local
-            listas[id].nombre = newText;
+            listas[id].nombre = nuevoTexto;
             localStorage.setItem("Taskhub", JSON.stringify(listas));
-
-            console.log('Texto editado:', newText);
         });
     }
 }

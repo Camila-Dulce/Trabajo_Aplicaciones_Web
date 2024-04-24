@@ -54,9 +54,8 @@ inputBuscar.addEventListener('keyup', ()=>{
 })
 
 const busqueda = (cadena) => {
-
         let arreglo = Array.from(listaTareas.children);
-
+        
         arreglo
         .filter(texto => !texto.textContent.toLowerCase().includes(cadena))
         .forEach (cadenaFiltrada => {

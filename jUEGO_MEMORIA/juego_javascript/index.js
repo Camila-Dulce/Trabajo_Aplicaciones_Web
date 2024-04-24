@@ -15,15 +15,13 @@ function accigarNumeroAleatorio() {
   for (let i = 0; i < botones.length; i++) {
     let num;
     do {
-      num = Math.floor(Math.random() * 4); // Genera un número aleatorio del 0 al 2
+      num = Math.floor(Math.random() * 4); // Genera un número aleatorio del 0 al 3
     } while (contador[num] >= 2); // Repite si el número ya se ha asignado dos veces
     botones[i].value = num;
     contador[num]++;
 
   }
 };
-
-
 accigarNumeroAleatorio();
 
 function buscar() {
@@ -66,7 +64,6 @@ function buscar() {
           buscar();
         }
       }
-      console.log(value);
     })
   });
 }
