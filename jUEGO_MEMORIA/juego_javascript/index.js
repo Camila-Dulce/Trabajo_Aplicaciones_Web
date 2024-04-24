@@ -13,7 +13,7 @@ let puntos = 0;
 let startiempo = false;
 
 function accigarNumeroAleatorio() {
-  let contador = [0, 0, 0, 0, 0 ,0]; // Un arreglo para contar cuántas veces se ha asignado cada número
+  let contador = [0, 0, 0, 0, 0 ,0]; // Un arreglo para contar cuantas veces se ha asignado cada numero
   for (let i = 0; i < botones.length; i++) {// ciclo sobre cada elemento del arreglo botones
     let num;
     do {
@@ -86,3 +86,10 @@ function incrementarContador() {
 const intervalo = 1000;
 setInterval(incrementarContador, intervalo);
 
+document.querySelector(".reiniciar").addEventListener("click", function() {
+  recargarPaguina();
+});
+
+function recargarPaguina(){
+  location.reload();
+}
