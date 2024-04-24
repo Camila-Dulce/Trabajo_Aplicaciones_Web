@@ -45,7 +45,6 @@ mostrarTareasFiltros();
 
 
 //buscar tareas
-
 const inputBuscar = document.getElementById("input");
 
 inputBuscar.addEventListener('keyup', ()=>{
@@ -54,7 +53,6 @@ inputBuscar.addEventListener('keyup', ()=>{
 })
 
 const busqueda = (cadena) => {
-
         let arreglo = Array.from(listaTareas.children);
 
         arreglo

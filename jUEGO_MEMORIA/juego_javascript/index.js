@@ -17,14 +17,23 @@ function accigarNumeroAleatorio() {
   for (let i = 0; i < botones.length; i++) {// ciclo sobre cada elemento del arreglo botones
     let num;
     do {
-      num = Math.floor(Math.random() * 6); // Genera un numero aleatorio del 0 al 3
-    } while (contador[num] >= 2); // Repite si el numero ya se ha asignado dos veces
-    botones[i].value = num;
-    contador[num]++;
+
+
+      num = Math.floor(Math.random() * 6); // Genera un número aleatorio del 0 al 3
+
+    } while (contador[num] >= 2); // Repite si el número ya se ha asignado dos veces
+    botones[i].value = num;// Asigna el número aleatorio al valor del botón
+    contador[num]++;// Incrementa el contador para el número asignado
   }
 };
 
 accigarNumeroAleatorio();
+
+
+
+accigarNumeroAleatorio();// Llama a la función para asignar números aleatorios
+
+
 
 function buscar() {
   let comparcion = false; // Variable para comparar si dos botones seleccionados tienen el mismo valor
